@@ -13,11 +13,11 @@ that appeared on the market.
 that are in the application.
 - If you press on a song it will open you a new page that will show the
 song details (band, duration, a YouTube link that will redirect you to YT)
-- If you are offline and you want to add a new record the data will be
+- If you are offline and you want to add a new record/song the data will be
 kept localy and it will show you a pending status. When you are connected 
-to the internet it will check firstly if the record exists in the 
+to the internet it will check firstly if the record/song exists in the 
 application and if it doesn't it will be added.
-Otherwise you will get a message that the record already exists.
-- After a record will be added the application will send you an email.
+Otherwise you will get a message that the record/song already exists.
+- After a record/song will be added the application will send you an email.
 - Also you can see on Google maps the countries where the bands that have
 songs in your application are. 
