@@ -1,0 +1,3 @@
+rootProject.name = 'myappl'
+
+include ':app'
