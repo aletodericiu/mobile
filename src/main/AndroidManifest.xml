@@ -16,11 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".EditItem" />
         <activity
-            android:name=".ListMusic"
-            android:label="@string/title_activity_list_music"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".EditItem"></activity>
+            android:name=".SettingsActivity"
+            android:label="action settings"
+            android:parentActivityName=".ListMusic">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ListMusic" />
+        </activity>
+        <activity android:name=".ListMusic"></activity>
     </application>
 
 </manifest>
