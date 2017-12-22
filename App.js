@@ -11,35 +11,36 @@ import {
     StyleSheet,
     Text,
     View,
-    FlatList, ScrollView, TextInput, Button,Linking
+    FlatList, ScrollView, TextInput, Button,Linking, AsyncStorage
 
 } from 'react-native';
-import {StackNavigator} from 'react-navigation'
+import {StackNavigator, NavigationActions} from 'react-navigation'
 
 
-var records=[
-    {
-      key:'1',
-        title:'song1',
-        band:'band1',
-        year:'1990',
-        genre:'genre1'
-    },
-    {
-        key:'2',
-        title:'song2',
-        band:'band2',
-        year:'2000',
-        genre:'genre2'
-    },
-    {
-        key:'3',
-        title:'song3',
-        band:'band3',
-        year:'2010',
-        genre:'genre3'
-    }
-]
+var records=[]
+
+    // {
+    //   key:'1',
+    //     title:'song1',
+    //     band:'band1',
+    //     year:'1990',
+    //     genre:'genre1'
+    // },
+    // {
+    //     key:'2',
+    //     title:'song2',
+    //     band:'band2',
+    //     year:'2000',
+    //     genre:'genre2'
+    // },
+    // {
+    //     key:'3',
+    //     title:'song3',
+    //     band:'band3',
+    //     year:'2010',
+    //     genre:'genre3'
+    // }
+
 
 
 
@@ -47,8 +48,31 @@ export default class App extends Component {
   render() {
       return (<MyApplication/> )
   }
+  componentDidMount(){
+    this._updateList();
+  }
+  _updateList () { 
+    let response = AsyncStorage.getItem('listOfRecords').then((response) =>    { console.log(response); records=JSON.parse(response) || [];}); 
+ 
+  } 
 }
 
+
+class Buttons extends Component{
+    render(){
+      const {navigate} = this.props.navigation;
+    return(
+        <View style={styles.container}>
+         <Button onPress={() => navigate('Home')}
+                    title="See records"
+                    color="#888888"  />
+          <Button onPress={() => navigate('AddScreen')}
+                    title="Add record"
+                    color="#888888"  />
+        </View>
+    )
+  }
+}
 
 class RecordList extends Component {
 
@@ -56,8 +80,10 @@ class RecordList extends Component {
       const {navigate} = this.props.navigation;
     return(
         <View style={styles.container}>
+        
           <Text style={{ fontSize:30}}> Records </Text>
           <FlatList
+                updateCellsBatchingPeriod={2000}
                 data = { records }
                 renderItem={
                       ({item}) =>
@@ -83,22 +109,71 @@ class RecordList extends Component {
 
 
 class Details extends Component{
+  // var record;
+
+  _resetStack() {
+    this.props
+               .navigation
+               .dispatch(NavigationActions.reset(
+                 {
+                    index: 0,
+                    actions: [
+                      NavigationActions.navigate({ routeName: 'Buttons'})
+                    ]
+                  }));
+  }
+
+  _updateRecord () { 
+    console.log(record);
+    console.log(records);
+   for(var i=0;i<records.length;i++){
+      if(records[i].title==record.title){
+        console.log("hei " + records[i].title);
+        records[i].band = this.state.band ? this.state.band : record.band;
+        records[i].year = this.state.year ? this.state.year : record.year;
+        records[i].genre = this.state.genre ? this.state.genre : record.genre;
+      }
+   }
+
+    AsyncStorage.setItem('listOfRecords',JSON.stringify(records)); 
+
+  } 
+
+  _deleteRecord () {
+    for(var i=0;i<records.length;i++){
+      if(records[i].title==record.title){
+        records.splice(i, 1);
+        break;
+      }
+   }
+        AsyncStorage.setItem('listOfRecords',JSON.stringify(records)); 
+
+  }
 
     render(){
+        const {navigate} = this.props.navigation;
         const {state} = this.props.navigation;
-        var record = state.params ? state.params.record : "<undefined>";
+        console.log(state);
+        record = state.params ? state.params.record : "<undefined>";
+
         return(
         <View style={styles.container}>
 
             <View  style={styles.singleItemDetails}>
               <Text>{record.title}</Text>
-              <TextInput> {record.band} </TextInput>
-              <TextInput> {record.year} </TextInput>
-              <TextInput> {record.genre} </TextInput>
+              <TextInput onChangeText={(content)=>this.setState({band:content})}>{record.band}</TextInput>
+              <TextInput onChangeText={(content)=>this.setState({year:content})}>{record.year}</TextInput>
+              <TextInput onChangeText={(content)=>this.setState({genre:content})}>{record.genre}</TextInput>
 
-              <ScrollView>
-                     <TextInput style={{height: 100, width: 300, marginTop:10 }} multiline={true}> {record.storyline} </TextInput>
-              </ScrollView>
+                 <Button onPress={() => {this._updateRecord(); this._resetStack(); }}
+
+                    title="Update Record"
+                    color="#888888"  />
+
+                    <Button onPress={() => {this._deleteRecord(); this._resetStack(); }}
+
+                    title="Delete Record"
+                    color="#888888"  />
             </View>
         </View>
 
@@ -132,10 +207,54 @@ class EmailComponent extends Component{
     }
 }
 
+class Add extends Component {
+  _addRecord () { 
+    console.log("hello");
+    records=[...records,this.state];
+    console.log(records);
+    console.log("hhh");
+
+    AsyncStorage.setItem('listOfRecords',JSON.stringify(records)); 
+
+    console.log(records);
+  } 
+  render(){
+          const {navigate} = this.props.navigation;
+
+    return(
+       <View style={styles.container}>
+
+            <View  style={styles.singleItemDetails}>
+              <TextInput onChangeText={(content)=>this.setState({title:content}) } style={styles.fullWidth} placeholder="Title" />
+              <TextInput onChangeText={(content)=>this.setState({band:content}) } style={styles.fullWidth} placeholder="Band" />
+              <TextInput onChangeText={(content)=>this.setState({year:content}) } style={styles.fullWidth} placeholder="Year" keyboardType="numeric"/>
+              <TextInput onChangeText={(content)=>this.setState({genre:content}) } style={styles.fullWidth} placeholder="Genre" />
+          <Button
+              onPress={() => {
+                            this._addRecord(); this.props
+               .navigation
+               .dispatch(NavigationActions.reset(
+                 {
+                    index: 0,
+                    actions: [
+                      NavigationActions.navigate({ routeName: 'Buttons'})
+                    ]
+                  })); }    }      
+              title="Add record"
+              color="#888888"
+          />
+            </View>
+        </View>
+      )
+  }
+}
+
 const MyApplication = StackNavigator({
+    Buttons: {screen: Buttons},
     Home: {screen: RecordList},
     Email: {screen: EmailComponent},
-    Details: {screen: Details}
+    Details: {screen: Details},
+    AddScreen: {screen: Add}
 })
 
 const styles = StyleSheet.create({
