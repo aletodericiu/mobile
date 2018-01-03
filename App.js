@@ -110,7 +110,6 @@ class Details extends Component{
         records[i].band = this.state.band ? this.state.band : record.band;
         records[i].year = this.state.year ? this.state.year : record.year;
         records[i].genre = this.state.genre ? this.state.genre : record.genre;
-        records[i].votes = this.state.votes ? this.state.votes : record.votes;
       }
    }
 
@@ -143,15 +142,7 @@ class Details extends Component{
               <TextInput onChangeText={(content)=>this.setState({band:content})}>{record.band}</TextInput>
               <TextInput onChangeText={(content)=>this.setState({year:content})}>{record.year}</TextInput>
               <TextInput onChangeText={(content)=>this.setState({genre:content})}>{record.genre}</TextInput>
-            <Picker
-              onValueChange={(itemValue, itemIndex) => console.log(itemValue)}>
-              
-              <Picker.Item label="1" value="1" />
-              <Picker.Item label="2" value="2" />
-              <Picker.Item label="3" value="3" />
-              <Picker.Item label="4" value="4" />
-              <Picker.Item label="5" value="5" />
-            </Picker>
+ 
                  <Button onPress={() => {this._updateRecord(); this._resetStack(); }}
 
                     title="Update Record"
@@ -161,11 +152,79 @@ class Details extends Component{
 
                     title="Delete Record"
                     color="#888888"  />
+
+                    <Button onPress={() => navigate('RateRecord')}
+                    title="Rate Record"
+                    color="#888888"  />
             </View>
         </View>
 
         );
     }
+}
+
+class RateRecord extends Component{
+
+  constructor(){
+        this.state={
+            newValue:1,
+        }
+    }
+
+    _resetStack() {
+    this.props
+               .navigation
+               .dispatch(NavigationActions.reset(
+                 {
+                    index: 0,
+                    actions: [
+                      NavigationActions.navigate({ routeName: 'Buttons'})
+                    ]
+                  }));
+  }
+
+  _saveRecord () { 
+    console.log(record);
+    console.log(records);
+   for(var i=0;i<records.length;i++){
+      if(records[i].title==record.title){
+        console.log("hei " + records[i].title);
+        records[i].votes.push(this.state.newValue);
+     
+      }
+   }
+
+    AsyncStorage.setItem('listOfRecords',JSON.stringify(records)); 
+
+  } 
+
+  render(){
+    const {navigate} = this.props.navigation;
+    const {state} = this.props.navigation;
+    record = state.params ? state.params.record : "<undefined>";
+    return(
+            <View style={styles.container}>
+                <Text style={styles.title}> Rate Record: </Text>
+                <Picker
+                 selectedValue={this.state.newValue}
+                 onValueChange={(newValue) =>{ this.setState({newValue})}}>
+                    <Picker.Item label="1" value="1" />
+                    <Picker.Item label="2" value="2" />
+                    <Picker.Item label="3" value="3" />
+                    <Picker.Item label="4" value="4" />
+                    <Picker.Item label="5" value="5" />
+                </Picker>
+
+                <View>
+                    <Button onPress={() => {this._saveRecord(); this._resetStack(); }}
+
+                    title="Send Vote"
+                    color="#888888"  />
+                </View>
+            </View>
+        );
+  }
+
 }
 
 
@@ -241,7 +300,8 @@ const MyApplication = StackNavigator({
     Home: {screen: RecordList},
     Email: {screen: EmailComponent},
     Details: {screen: Details},
-    AddScreen: {screen: Add}
+    AddScreen: {screen: Add},
+    RateRecord: {screen: RateRecord}
 })
 
 const styles = StyleSheet.create({
@@ -274,6 +334,11 @@ const styles = StyleSheet.create({
        backgroundColor: '#F91111',
 
    },
+
+    title:{
+        fontSize: 30,
+        alignSelf: 'center',
+    },
 
   instructions: {
     textAlign: 'center',
