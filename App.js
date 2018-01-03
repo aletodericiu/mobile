@@ -11,35 +11,13 @@ import {
     StyleSheet,
     Text,
     View,
-    FlatList, ScrollView, TextInput, Button,Linking, AsyncStorage
+    FlatList, ScrollView, TextInput, Button,Linking, AsyncStorage, Picker
 
 } from 'react-native';
 import {StackNavigator, NavigationActions} from 'react-navigation'
 
 
 var records=[]
-
-    // {
-    //   key:'1',
-    //     title:'song1',
-    //     band:'band1',
-    //     year:'1990',
-    //     genre:'genre1'
-    // },
-    // {
-    //     key:'2',
-    //     title:'song2',
-    //     band:'band2',
-    //     year:'2000',
-    //     genre:'genre2'
-    // },
-    // {
-    //     key:'3',
-    //     title:'song3',
-    //     band:'band3',
-    //     year:'2010',
-    //     genre:'genre3'
-    // }
 
 
 
@@ -132,6 +110,7 @@ class Details extends Component{
         records[i].band = this.state.band ? this.state.band : record.band;
         records[i].year = this.state.year ? this.state.year : record.year;
         records[i].genre = this.state.genre ? this.state.genre : record.genre;
+        records[i].votes = this.state.votes ? this.state.votes : record.votes;
       }
    }
 
@@ -155,7 +134,7 @@ class Details extends Component{
         const {state} = this.props.navigation;
         console.log(state);
         record = state.params ? state.params.record : "<undefined>";
-
+        //this.setState({this.state.votes.append(): itemValue})
         return(
         <View style={styles.container}>
 
@@ -164,7 +143,15 @@ class Details extends Component{
               <TextInput onChangeText={(content)=>this.setState({band:content})}>{record.band}</TextInput>
               <TextInput onChangeText={(content)=>this.setState({year:content})}>{record.year}</TextInput>
               <TextInput onChangeText={(content)=>this.setState({genre:content})}>{record.genre}</TextInput>
-
+            <Picker
+              onValueChange={(itemValue, itemIndex) => console.log(itemValue)}>
+              
+              <Picker.Item label="1" value="1" />
+              <Picker.Item label="2" value="2" />
+              <Picker.Item label="3" value="3" />
+              <Picker.Item label="4" value="4" />
+              <Picker.Item label="5" value="5" />
+            </Picker>
                  <Button onPress={() => {this._updateRecord(); this._resetStack(); }}
 
                     title="Update Record"
