@@ -1,0 +1,382 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:2:1-33:12
+MERGED from [com.android.support:design:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\2b04157caafab8afb5aebcc2bc34a5a6\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:preference-v7:25.1.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\preference-v7-25.1.0.aar\d392a011fd2efd87d1c280e69daef5ad\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\fd4b76ffed3275c7c97618561b217a6f\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\f284bc3b7ab0b621dfd6a9847d27ea53\AndroidManifest.xml:2:1-11:12
+MERGED from [com.jjoe64:graphview:4.2.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\graphview-4.2.1.aar\ce6eac40d1953aa6b536ee91c79dfc80\AndroidManifest.xml:2:1-14:12
+MERGED from [com.google.firebase:firebase-core:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-core-9.0.0.aar\46a3319417bc96fa486408d654cf2618\AndroidManifest.xml:2:1-6:12
+MERGED from [com.android.support:transition:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\transition-25.3.1.aar\7547478642dbdcc5f7301a3586c22374\AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\95e684af8f0d18147cf7b46e689cf837\AndroidManifest.xml:16:1-42:12
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\41f1ae76bce407c35357d6e4df4b542c\AndroidManifest.xml:16:1-42:12
+MERGED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\play-services-base-9.0.0.aar\303cf6792db343402c586281e2958b52\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:16:1-60:12
+MERGED from [com.google.firebase:firebase-common:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-common-9.0.0.aar\61e01cf28e7f7f2297dcb87668958dae\AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.android.gms:play-services-tasks:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\play-services-tasks-9.0.0.aar\66c87d3bb673b87ef0a612fc5d69e121\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\play-services-basement-9.0.0.aar\9b632881f9ff13e1660cc2bf4ed13593\AndroidManifest.xml:16:1-26:12
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\932ef6e69c1c3c2cff1fb46dde645cfc\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\b7ed14e7c164cc6029e47a6201359160\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\286d32ce8e8f0f6320b7d4345dbdaa72\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\17babc50e9c45cec4ec521759aab2d9f\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.3.1.aar\f5cc1361b9507c8362976f9f1fee6518\AndroidManifest.xml:17:1-26:12
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\fca88e7984515f4b6c64b6935442976a\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\4e73181690c1cdc0cb23c2a63bace2e2\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\445fd8bac58f10b96cbc664b13181dcd\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\3632aca5144810f04ea062ac98defad5\AndroidManifest.xml:17:1-31:12
+INJECTED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:2:1-33:12
+	package
+		ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:3:5-46
+		INJECTED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:2:1-33:12
+		INJECTED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:2:1-33:12
+		INJECTED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:5:5-31:19
+MERGED from [com.android.support:design:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\2b04157caafab8afb5aebcc2bc34a5a6\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:design:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\2b04157caafab8afb5aebcc2bc34a5a6\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:preference-v7:25.1.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\preference-v7-25.1.0.aar\d392a011fd2efd87d1c280e69daef5ad\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:preference-v7:25.1.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\preference-v7-25.1.0.aar\d392a011fd2efd87d1c280e69daef5ad\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\fd4b76ffed3275c7c97618561b217a6f\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\fd4b76ffed3275c7c97618561b217a6f\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\f284bc3b7ab0b621dfd6a9847d27ea53\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\f284bc3b7ab0b621dfd6a9847d27ea53\AndroidManifest.xml:9:5-20
+MERGED from [com.jjoe64:graphview:4.2.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\graphview-4.2.1.aar\ce6eac40d1953aa6b536ee91c79dfc80\AndroidManifest.xml:11:5-12:19
+MERGED from [com.jjoe64:graphview:4.2.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\graphview-4.2.1.aar\ce6eac40d1953aa6b536ee91c79dfc80\AndroidManifest.xml:11:5-12:19
+MERGED from [com.google.firebase:firebase-core:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-core-9.0.0.aar\46a3319417bc96fa486408d654cf2618\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-core:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-core-9.0.0.aar\46a3319417bc96fa486408d654cf2618\AndroidManifest.xml:5:5-20
+MERGED from [com.android.support:transition:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\transition-25.3.1.aar\7547478642dbdcc5f7301a3586c22374\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\transition-25.3.1.aar\7547478642dbdcc5f7301a3586c22374\AndroidManifest.xml:26:5-20
+MERGED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\95e684af8f0d18147cf7b46e689cf837\AndroidManifest.xml:26:5-41:19
+MERGED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\95e684af8f0d18147cf7b46e689cf837\AndroidManifest.xml:26:5-41:19
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\41f1ae76bce407c35357d6e4df4b542c\AndroidManifest.xml:26:5-41:19
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\41f1ae76bce407c35357d6e4df4b542c\AndroidManifest.xml:26:5-41:19
+MERGED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\play-services-base-9.0.0.aar\303cf6792db343402c586281e2958b52\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\play-services-base-9.0.0.aar\303cf6792db343402c586281e2958b52\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:30:5-59:19
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:30:5-59:19
+MERGED from [com.google.firebase:firebase-common:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-common-9.0.0.aar\61e01cf28e7f7f2297dcb87668958dae\AndroidManifest.xml:5:5-12:19
+MERGED from [com.google.firebase:firebase-common:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-common-9.0.0.aar\61e01cf28e7f7f2297dcb87668958dae\AndroidManifest.xml:5:5-12:19
+MERGED from [com.google.android.gms:play-services-tasks:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\play-services-tasks-9.0.0.aar\66c87d3bb673b87ef0a612fc5d69e121\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\play-services-tasks-9.0.0.aar\66c87d3bb673b87ef0a612fc5d69e121\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\play-services-basement-9.0.0.aar\9b632881f9ff13e1660cc2bf4ed13593\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\play-services-basement-9.0.0.aar\9b632881f9ff13e1660cc2bf4ed13593\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\932ef6e69c1c3c2cff1fb46dde645cfc\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\932ef6e69c1c3c2cff1fb46dde645cfc\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\b7ed14e7c164cc6029e47a6201359160\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\b7ed14e7c164cc6029e47a6201359160\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\286d32ce8e8f0f6320b7d4345dbdaa72\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\286d32ce8e8f0f6320b7d4345dbdaa72\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\17babc50e9c45cec4ec521759aab2d9f\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\17babc50e9c45cec4ec521759aab2d9f\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\fca88e7984515f4b6c64b6935442976a\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\fca88e7984515f4b6c64b6935442976a\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\4e73181690c1cdc0cb23c2a63bace2e2\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\4e73181690c1cdc0cb23c2a63bace2e2\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\445fd8bac58f10b96cbc664b13181dcd\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\445fd8bac58f10b96cbc664b13181dcd\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\3632aca5144810f04ea062ac98defad5\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\3632aca5144810f04ea062ac98defad5\AndroidManifest.xml:29:5-20
+	android:supportsRtl
+		ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:11:9-40
+activity#com.example.ioana.myapplication.MainActivity
+ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:12:19-47
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:16:27-74
+activity#com.example.ioana.myapplication.EditItem
+ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:19:9-46
+	android:name
+		ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:19:19-43
+activity#com.example.ioana.myapplication.SettingsActivity
+ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:20:9-27:20
+	android:parentActivityName
+		ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:23:13-52
+	android:label
+		ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:22:13-44
+	android:name
+		ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:21:13-45
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:24:13-26:46
+	android:value
+		ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:26:17-43
+	android:name
+		ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:25:17-63
+activity#com.example.ioana.myapplication.ListMusic
+ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:28:9-47
+	android:name
+		ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:28:19-44
+activity#com.example.ioana.myapplication.AddItem
+ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:29:9-45
+	android:name
+		ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:29:19-42
+activity#com.example.ioana.myapplication.DetailsRecordActivity
+ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:30:9-68
+	android:name
+		ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml:30:19-56
+uses-sdk
+INJECTED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\2b04157caafab8afb5aebcc2bc34a5a6\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\2b04157caafab8afb5aebcc2bc34a5a6\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:preference-v7:25.1.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\preference-v7-25.1.0.aar\d392a011fd2efd87d1c280e69daef5ad\AndroidManifest.xml:7:5-43
+MERGED from [com.android.support:preference-v7:25.1.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\preference-v7-25.1.0.aar\d392a011fd2efd87d1c280e69daef5ad\AndroidManifest.xml:7:5-43
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\fd4b76ffed3275c7c97618561b217a6f\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\fd4b76ffed3275c7c97618561b217a6f\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\f284bc3b7ab0b621dfd6a9847d27ea53\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\f284bc3b7ab0b621dfd6a9847d27ea53\AndroidManifest.xml:5:5-7:41
+MERGED from [com.jjoe64:graphview:4.2.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\graphview-4.2.1.aar\ce6eac40d1953aa6b536ee91c79dfc80\AndroidManifest.xml:7:5-9:41
+MERGED from [com.jjoe64:graphview:4.2.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\graphview-4.2.1.aar\ce6eac40d1953aa6b536ee91c79dfc80\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:firebase-core:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-core-9.0.0.aar\46a3319417bc96fa486408d654cf2618\AndroidManifest.xml:4:5-42
+MERGED from [com.google.firebase:firebase-core:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-core-9.0.0.aar\46a3319417bc96fa486408d654cf2618\AndroidManifest.xml:4:5-42
+MERGED from [com.android.support:transition:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\transition-25.3.1.aar\7547478642dbdcc5f7301a3586c22374\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\transition-25.3.1.aar\7547478642dbdcc5f7301a3586c22374\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\95e684af8f0d18147cf7b46e689cf837\AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\95e684af8f0d18147cf7b46e689cf837\AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\41f1ae76bce407c35357d6e4df4b542c\AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\41f1ae76bce407c35357d6e4df4b542c\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\play-services-base-9.0.0.aar\303cf6792db343402c586281e2958b52\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\play-services-base-9.0.0.aar\303cf6792db343402c586281e2958b52\AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-common:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-common-9.0.0.aar\61e01cf28e7f7f2297dcb87668958dae\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-common:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-common-9.0.0.aar\61e01cf28e7f7f2297dcb87668958dae\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\play-services-tasks-9.0.0.aar\66c87d3bb673b87ef0a612fc5d69e121\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\play-services-tasks-9.0.0.aar\66c87d3bb673b87ef0a612fc5d69e121\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\play-services-basement-9.0.0.aar\9b632881f9ff13e1660cc2bf4ed13593\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\play-services-basement-9.0.0.aar\9b632881f9ff13e1660cc2bf4ed13593\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\932ef6e69c1c3c2cff1fb46dde645cfc\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\932ef6e69c1c3c2cff1fb46dde645cfc\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\b7ed14e7c164cc6029e47a6201359160\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\b7ed14e7c164cc6029e47a6201359160\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\286d32ce8e8f0f6320b7d4345dbdaa72\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\286d32ce8e8f0f6320b7d4345dbdaa72\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\17babc50e9c45cec4ec521759aab2d9f\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\17babc50e9c45cec4ec521759aab2d9f\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.3.1.aar\f5cc1361b9507c8362976f9f1fee6518\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.3.1.aar\f5cc1361b9507c8362976f9f1fee6518\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\fca88e7984515f4b6c64b6935442976a\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\fca88e7984515f4b6c64b6935442976a\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\4e73181690c1cdc0cb23c2a63bace2e2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\4e73181690c1cdc0cb23c2a63bace2e2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\445fd8bac58f10b96cbc664b13181dcd\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\445fd8bac58f10b96cbc664b13181dcd\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\3632aca5144810f04ea062ac98defad5\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\3632aca5144810f04ea062ac98defad5\AndroidManifest.xml:21:5-23:58
+INJECTED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\2b04157caafab8afb5aebcc2bc34a5a6\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Ioana\AndroidStudioProjects\MyApplication\app\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\2b04157caafab8afb5aebcc2bc34a5a6\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\fd4b76ffed3275c7c97618561b217a6f\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\fd4b76ffed3275c7c97618561b217a6f\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:transition:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\transition-25.3.1.aar\7547478642dbdcc5f7301a3586c22374\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\transition-25.3.1.aar\7547478642dbdcc5f7301a3586c22374\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\932ef6e69c1c3c2cff1fb46dde645cfc\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\932ef6e69c1c3c2cff1fb46dde645cfc\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\b7ed14e7c164cc6029e47a6201359160\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\b7ed14e7c164cc6029e47a6201359160\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\286d32ce8e8f0f6320b7d4345dbdaa72\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\286d32ce8e8f0f6320b7d4345dbdaa72\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\17babc50e9c45cec4ec521759aab2d9f\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\17babc50e9c45cec4ec521759aab2d9f\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.3.1.aar\f5cc1361b9507c8362976f9f1fee6518\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.3.1.aar\f5cc1361b9507c8362976f9f1fee6518\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\fca88e7984515f4b6c64b6935442976a\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\fca88e7984515f4b6c64b6935442976a\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\4e73181690c1cdc0cb23c2a63bace2e2\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\4e73181690c1cdc0cb23c2a63bace2e2\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\445fd8bac58f10b96cbc664b13181dcd\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\445fd8bac58f10b96cbc664b13181dcd\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\3632aca5144810f04ea062ac98defad5\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\3632aca5144810f04ea062ac98defad5\AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:design:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\2b04157caafab8afb5aebcc2bc34a5a6\AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:design:25.3.1] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\2b04157caafab8afb5aebcc2bc34a5a6\AndroidManifest.xml:26:9-47
+uses-permission#android.permission.INTERNET
+ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\95e684af8f0d18147cf7b46e689cf837\AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\41f1ae76bce407c35357d6e4df4b542c\AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\41f1ae76bce407c35357d6e4df4b542c\AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:21:5-67
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\95e684af8f0d18147cf7b46e689cf837\AndroidManifest.xml:21:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\95e684af8f0d18147cf7b46e689cf837\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\41f1ae76bce407c35357d6e4df4b542c\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\41f1ae76bce407c35357d6e4df4b542c\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:20:5-79
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:20:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\95e684af8f0d18147cf7b46e689cf837\AndroidManifest.xml:22:22-76
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\95e684af8f0d18147cf7b46e689cf837\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\41f1ae76bce407c35357d6e4df4b542c\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\41f1ae76bce407c35357d6e4df4b542c\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:22:5-68
+MERGED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:22:5-68
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\95e684af8f0d18147cf7b46e689cf837\AndroidManifest.xml:24:22-65
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\95e684af8f0d18147cf7b46e689cf837\AndroidManifest.xml:28:7-34:18
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\41f1ae76bce407c35357d6e4df4b542c\AndroidManifest.xml:28:7-34:18
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\41f1ae76bce407c35357d6e4df4b542c\AndroidManifest.xml:28:7-34:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\95e684af8f0d18147cf7b46e689cf837\AndroidManifest.xml:30:11-33
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\95e684af8f0d18147cf7b46e689cf837\AndroidManifest.xml:29:11-83
+intent-filter#com.google.android.gms.measurement.UPLOAD
+ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\95e684af8f0d18147cf7b46e689cf837\AndroidManifest.xml:31:9-33:25
+action#com.google.android.gms.measurement.UPLOAD
+ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\95e684af8f0d18147cf7b46e689cf837\AndroidManifest.xml:32:11-77
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\95e684af8f0d18147cf7b46e689cf837\AndroidManifest.xml:32:19-75
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\95e684af8f0d18147cf7b46e689cf837\AndroidManifest.xml:36:7-39:37
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\41f1ae76bce407c35357d6e4df4b542c\AndroidManifest.xml:36:7-39:37
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-9.0.0.aar\41f1ae76bce407c35357d6e4df4b542c\AndroidManifest.xml:36:7-39:37
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\95e684af8f0d18147cf7b46e689cf837\AndroidManifest.xml:38:11-33
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\95e684af8f0d18147cf7b46e689cf837\AndroidManifest.xml:39:11-35
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-analytics-9.0.0.aar\95e684af8f0d18147cf7b46e689cf837\AndroidManifest.xml:37:11-82
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\play-services-base-9.0.0.aar\303cf6792db343402c586281e2958b52\AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\play-services-base-9.0.0.aar\303cf6792db343402c586281e2958b52\AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\play-services-base-9.0.0.aar\303cf6792db343402c586281e2958b52\AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\play-services-base-9.0.0.aar\303cf6792db343402c586281e2958b52\AndroidManifest.xml:20:19-85
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:23:5-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:23:22-79
+permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:25:5-26:47
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:26:9-44
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:25:17-71
+permission#com.example.ioana.myapplication.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:25:5-26:47
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:26:9-44
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:25:17-71
+uses-permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:28:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:28:22-76
+uses-permission#com.example.ioana.myapplication.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:28:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:28:22-76
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:32:9-41:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:34:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:35:13-73
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:33:13-78
+intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:36:13-40:29
+intent-filter#com.example.ioana.myapplication+com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:36:13-40:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:37:17-81
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:37:25-78
+action#com.google.android.c2dm.intent.REGISTRATION
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:38:17-86
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:38:25-83
+category#${applicationId}
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:39:17-61
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:39:27-58
+category#com.example.ioana.myapplication
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:39:17-61
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:39:27-58
+receiver#com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:45:9-47:40
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:47:13-37
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:46:13-86
+service#com.google.firebase.iid.FirebaseInstanceIdService
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:51:9-57:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:53:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:52:13-77
+intent-filter#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:54:13-56:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:54:28-51
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:55:17-80
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-iid-9.0.0.aar\dcd1fd15b918ec9abab154192568da88\AndroidManifest.xml:55:25-77
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-common-9.0.0.aar\61e01cf28e7f7f2297dcb87668958dae\AndroidManifest.xml:7:9-11:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-common-9.0.0.aar\61e01cf28e7f7f2297dcb87668958dae\AndroidManifest.xml:8:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-common-9.0.0.aar\61e01cf28e7f7f2297dcb87668958dae\AndroidManifest.xml:10:13-37
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-common-9.0.0.aar\61e01cf28e7f7f2297dcb87668958dae\AndroidManifest.xml:11:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\firebase-common-9.0.0.aar\61e01cf28e7f7f2297dcb87668958dae\AndroidManifest.xml:9:13-58
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\play-services-basement-9.0.0.aar\9b632881f9ff13e1660cc2bf4ed13593\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\play-services-basement-9.0.0.aar\9b632881f9ff13e1660cc2bf4ed13593\AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:9.0.0] C:\Users\Ioana\.gradle\caches\transforms-1\files-1.1\play-services-basement-9.0.0.aar\9b632881f9ff13e1660cc2bf4ed13593\AndroidManifest.xml:22:13-58
