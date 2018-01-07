@@ -166,8 +166,9 @@ class Details extends Component{
 class RateRecord extends Component{
 
   constructor(){
+        super();
         this.state={
-            newValue:1,
+            newValue:"1",
         }
     }
 
