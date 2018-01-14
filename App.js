@@ -16,6 +16,8 @@ import {
 } from 'react-native';
 import {StackNavigator, NavigationActions} from 'react-navigation'
 
+import firebase from 'firebase'
+
 
 var records=[]
 
@@ -23,6 +25,19 @@ var records=[]
 
 
 export default class App extends Component {
+  componentWillMount() {
+      const firebaseConfig = {
+          apiKey: "AIzaSyD3xgmLLyevaLYg_GZwMxhwYJwlcsS9rQE",
+          authDomain: "musicrecordreact.firebaseapp.com",
+          databaseURL: "https://musicrecordreact.firebaseio.com",
+          projectId: "musicrecordreact",
+          storageBucket: "musicrecordreact.appspot.com",
+          messagingSenderId: "129809460259"
+      };
+      firebase.initializeApp(firebaseConfig);
+      firebase.auth().signOut();
+  }
+
   render() {
       return (<MyApplication/> )
   }
@@ -296,8 +311,59 @@ class Add extends Component {
   }
 }
 
+class Login extends Component {
+
+  render() {
+    const {navigate} = this.props.navigation;
+    return(
+        <View style={styles.container}>
+          <Text>LOGIN</Text>
+          <TextInput
+              style={{width: "80%", borderWidth: 1, backgroundColor: 'white'}}
+              onChangeText={(email) => this.email = email}
+              placeholder={"Email"} />
+          <TextInput
+              style={{width: "80%", borderWidth: 1, backgroundColor: 'white'}}
+              onChangeText={(password) => this.password = password}
+              secureTextEntry={true}
+              placeholder={"Password"} />
+
+              <Button
+                title="Sign in"
+                onPress={() => {
+                    firebase.auth().signInWithEmailAndPassword(this.email, this.password)
+                        .then(function () {
+                            alert("Welcome " + firebase.auth().currentUser.email + "!");
+                            if (firebase.auth().currentUser.email === 'admin@gmail.com') {
+                                navigate("AdminHomeScreen");
+                            }
+                            else {
+                                navigate('Buttons');
+                            }
+                        }).catch(function (error) {
+                        alert(error.code);
+                        alert(error.message);
+                    });
+                }} />
+        </View>
+      )
+  }
+}
+
+class AdminHomeScreen extends Component {
+  render() {
+    return (
+        <View style={styles.container}>
+          <Text> Admin Page </Text>
+        </View>
+      )
+  }
+}
+
 const MyApplication = StackNavigator({
+    Login: {screen: Login},
     Buttons: {screen: Buttons},
+    AdminHomeScreen: {screen: AdminHomeScreen},
     Home: {screen: RecordList},
     Email: {screen: EmailComponent},
     Details: {screen: Details},
