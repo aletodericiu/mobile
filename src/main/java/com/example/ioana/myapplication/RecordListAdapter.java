@@ -9,6 +9,9 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.example.ioana.myapplication.Domain.RecordItem;
+import com.example.ioana.myapplication.Listeners.OnLongClickListenerRecord;
+
 import java.util.List;
 
 /**
@@ -32,9 +35,13 @@ public class RecordListAdapter extends ArrayAdapter<RecordItem> {
         TextView song_view=(TextView) listItemView.findViewById(R.id.song);
         TextView band_view=(TextView) listItemView.findViewById(R.id.band);
         TextView genre_view=(TextView) listItemView.findViewById(R.id.genre);
+        TextView id_view= (TextView) listItemView.findViewById(R.id.recordId);
         song_view.setText(record.getName());
         band_view.setText(record.getBand());
         genre_view.setText(record.getGenre());
+        id_view.setText(record.getId()+"");
+        listItemView.setOnLongClickListener(new OnLongClickListenerRecord());
+
         return listItemView;
     }
 

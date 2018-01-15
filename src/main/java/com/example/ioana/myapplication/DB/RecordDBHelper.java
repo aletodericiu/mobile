@@ -1,13 +1,8 @@
-package com.example.ioana.myapplication;
+package com.example.ioana.myapplication.DB;
 
-import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.database.sqlite.SQLiteTransactionListener;
-import android.icu.text.AlphabeticIndex;
-import android.util.Log;
 
 /**
  * Created by Ioana on 11/17/2017.

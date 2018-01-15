@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ioana.myapplication.EditItem">
+    tools:context="com.example.ioana.myapplication.Listeners.AddItem">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -18,10 +18,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Song name:" />
+
         <EditText
             android:id="@+id/song_edit"
-            android:layout_width="wrap_content"
-            android:visibility="invisible"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <TextView
@@ -31,7 +35,7 @@
 
         <EditText
             android:id="@+id/band_edit"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <TextView
@@ -41,8 +45,10 @@
 
         <EditText
             android:id="@+id/genre_edit"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
     </LinearLayout>
+
+
 </android.support.constraint.ConstraintLayout>

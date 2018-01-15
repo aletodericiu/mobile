@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ioana.myapplication.Listeners.DetailsRecordActivity">
+
+
+    <TextView
+        android:id="@+id/textSongName"
+        android:gravity="center"
+        android:padding="15px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:hint="Song Name"
+        android:maxLines="1">
+        <requestFocus />
+    </TextView>
+
+    <TextView
+        android:id="@+id/textSongBand"
+        android:gravity="center"
+        android:padding="15px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textSongName"
+        android:hint="Song Band"
+        android:maxLines="1" />
+
+    <TextView
+        android:id="@+id/textSongGenre"
+        android:gravity="center"
+        android:padding="15px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textSongBand"
+        android:hint="Song Genre"
+        android:maxLines="1" />
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:layout_below="@+id/textSongGenre"
+        android:id="@+id/graph" />
+
+</RelativeLayout>

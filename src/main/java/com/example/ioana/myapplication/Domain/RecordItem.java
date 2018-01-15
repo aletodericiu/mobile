@@ -1,4 +1,6 @@
-package com.example.ioana.myapplication;
+package com.example.ioana.myapplication.Domain;
+
+import android.icu.text.AlphabeticIndex;
 
 /**
  * Created by Ioana on 11/11/2017.
@@ -6,6 +8,7 @@ package com.example.ioana.myapplication;
 
 public class RecordItem {
 
+    Integer id;
     String name;
     String band;
     String genre;
@@ -15,6 +18,21 @@ public class RecordItem {
         this.band = band;
         this.genre = genre;
     }
+
+    public RecordItem(Integer id,String name, String band, String genre) {
+        this.id=id;
+        this.name = name;
+        this.band = band;
+        this.genre = genre;
+    }
+
+    public RecordItem(){}
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) { this.id = id; }
 
     public String getName() {
         return name;

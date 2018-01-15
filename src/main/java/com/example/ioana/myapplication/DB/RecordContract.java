@@ -1,4 +1,4 @@
-package com.example.ioana.myapplication;
+package com.example.ioana.myapplication.DB;
 
 import android.provider.BaseColumns;
 

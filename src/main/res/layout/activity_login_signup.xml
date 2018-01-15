@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ioana.myapplication.HomeActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical|center_horizontal|center">
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:textSize="32sp"
+            android:text="WELCOME" />
+
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:hint="EMAIL"
+            android:layout_below="@+id/welcome"
+            android:maxLines="1" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/email"
+            android:inputType = "textPassword"
+            android:hint="PASSWORD"
+            android:maxLines="1" />
+
+        <Button
+            android:id = "@+id/loginButton"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_below="@+id/password"
+            android:text = "Login"
+            android:gravity="center"
+            />
+
+        <Button
+            android:id = "@+id/signupButton"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_below="@+id/loginButton"
+            android:text = "SIGN UP"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/authFailed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/signupButton"
+            android:textColor="#f00"
+            android:text=""
+            android:gravity="center"
+            android:maxLines="1" />
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>
