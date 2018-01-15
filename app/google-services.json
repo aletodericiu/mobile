@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "171197834600",
+    "firebase_url": "https://musicrecord-dd68b.firebaseio.com",
+    "project_id": "musicrecord-dd68b",
+    "storage_bucket": "musicrecord-dd68b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:171197834600:android:4c915b40f9ef1eb4",
+        "android_client_info": {
+          "package_name": "com.example.ioana.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "171197834600-osama5ojl4o3ljsegufojshka96ueqcs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ioana.myapplication",
+            "certificate_hash": "98293053881a09e3e047b2c667cd9d00182b9514"
+          }
+        },
+        {
+          "client_id": "171197834600-e4ttao1jhtl8u6mdf1hv5gnteok1kjg3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAR8Z4psQp0HZ7Xw-8VBwuVd-I2rFQypwY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "171197834600-e4ttao1jhtl8u6mdf1hv5gnteok1kjg3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
