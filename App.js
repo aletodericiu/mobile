@@ -11,17 +11,12 @@ import {
     StyleSheet,
     Text,
     View,
-    FlatList, ScrollView, TextInput, Button,Linking, AsyncStorage, Picker
+    FlatList, ScrollView, TextInput, Button,Linking, AsyncStorage, Picker, TouchableOpacity
 
 } from 'react-native';
 import {StackNavigator, NavigationActions} from 'react-navigation'
 
 import firebase from 'firebase'
-
-
-var records=[]
-
-
 
 
 export default class App extends Component {
@@ -45,7 +40,7 @@ export default class App extends Component {
     this._updateList();
   }
   _updateList () { 
-    let response = AsyncStorage.getItem('listOfRecords').then((response) =>    { console.log(response); records=JSON.parse(response) || [];}); 
+    // let response = AsyncStorage.getItem('listOfRecords').then((response) =>    { console.log(response); records=JSON.parse(response) || [];}); 
  
   } 
 }
@@ -59,31 +54,59 @@ class Buttons extends Component{
          <Button onPress={() => navigate('Home')}
                     title="See records"
                     color="#888888"  />
-          <Button onPress={() => navigate('AddScreen')}
-                    title="Add record"
-                    color="#888888"  />
         </View>
     )
   }
 }
 
 class RecordList extends Component {
+  constructor() {
+        super();
+        this.onRefresh = this.onRefresh.bind(this);
+        this.records = []
+        this.state = {
+            refreshing: false,
+        };
+    }
+
+    onRefresh() {
+      this.setState({refreshing: true});
+        firebase.database().ref().child("records").on('value', (childSnapshot) => {
+                childSnapshot.forEach((doc) => {
+                    let record = { title: doc.toJSON().title, band: doc.toJSON().band, id: doc.toJSON().id, year: doc.toJSON().year, genre: doc.toJSON().genre };
+                    this.records.push(record);
+                });
+                this.setState({refreshing: false});
+            });
+            
+    }
+
+    componentWillMount() {
+        this.onRefresh();
+    }
 
   render(){
       const {navigate} = this.props.navigation;
+      if (this.state.refreshing)
+            return (
+                <Text>Loading...</Text>
+            );
     return(
         <View style={styles.container}>
         
           <Text style={{ fontSize:30}}> Records </Text>
           <FlatList
                 updateCellsBatchingPeriod={2000}
-                data = { records }
+                data = { this.records }
                 renderItem={
                       ({item}) =>
                           <ScrollView>
                               <View style={styles.linearView} >
-                                <Text style={styles.item} onPress={() => navigate('Details',{ record : item })
-                                                                        } >{item.title} -> {item.band}</Text>
+                                <TouchableOpacity onPress={() => navigate('Details',{ record : item })}> 
+                                    <View>
+                                    <Text style={styles.item} >{item.title} -> {item.band}</Text>
+                                    </View>
+                                  </TouchableOpacity>
                               </View>
                           </ScrollView>
                       } />
@@ -105,7 +128,18 @@ class Details extends Component{
   // var record;
 
   _resetStack() {
+    if (firebase.auth().currentUser.email === 'admin@gmail.com') {
     this.props
+               .navigation
+               .dispatch(NavigationActions.reset(
+                 {
+                    index: 0,
+                    actions: [
+                      NavigationActions.navigate({ routeName: 'AdminHomeScreen'})
+                    ]
+                  }));
+             } else {
+              this.props
                .navigation
                .dispatch(NavigationActions.reset(
                  {
@@ -114,33 +148,21 @@ class Details extends Component{
                       NavigationActions.navigate({ routeName: 'Buttons'})
                     ]
                   }));
+             }
   }
 
   _updateRecord () { 
-    console.log(record);
-    console.log(records);
-   for(var i=0;i<records.length;i++){
-      if(records[i].title==record.title){
-        console.log("hei " + records[i].title);
-        records[i].band = this.state.band ? this.state.band : record.band;
-        records[i].year = this.state.year ? this.state.year : record.year;
-        records[i].genre = this.state.genre ? this.state.genre : record.genre;
-      }
-   }
-
-    AsyncStorage.setItem('listOfRecords',JSON.stringify(records)); 
-
+    if (this.state.band)
+      record.band = this.state.band;
+    if (this.state.year)
+      record.year = this.state.year;
+    if (this.state.genre)
+      record.genre = this.state.genre;
+    firebase.database().ref('records').child(record.id).update(record); 
   } 
 
   _deleteRecord () {
-    for(var i=0;i<records.length;i++){
-      if(records[i].title==record.title){
-        records.splice(i, 1);
-        break;
-      }
-   }
-        AsyncStorage.setItem('listOfRecords',JSON.stringify(records)); 
-
+   firebase.database().ref('records').child(record.id).remove();
   }
 
     render(){
@@ -158,19 +180,23 @@ class Details extends Component{
               <TextInput onChangeText={(content)=>this.setState({year:content})}>{record.year}</TextInput>
               <TextInput onChangeText={(content)=>this.setState({genre:content})}>{record.genre}</TextInput>
  
-                 <Button onPress={() => {this._updateRecord(); this._resetStack(); }}
+                 <TouchableOpacity onPress={() => {this._updateRecord(); this._resetStack(); }} >
+                  <View style={styles.niceButton}>
+                    <Text>Update Record</Text>
+                    </View>
+                    </TouchableOpacity>
 
-                    title="Update Record"
-                    color="#888888"  />
+                    <TouchableOpacity onPress={() => {this._deleteRecord(); this._resetStack(); }} >
+                    <View style={styles.niceButton}>
+                    <Text>Delete Record</Text>
+                    </View>
+                    </TouchableOpacity>
 
-                    <Button onPress={() => {this._deleteRecord(); this._resetStack(); }}
-
-                    title="Delete Record"
-                    color="#888888"  />
-
-                    <Button onPress={() => navigate('RateRecord')}
-                    title="Rate Record"
-                    color="#888888"  />
+                    <TouchableOpacity onPress={() => navigate('RateRecord')}>
+                    <View style={styles.niceButton}>
+                    <Text>Rate Record</Text>
+                    </View>
+                    </TouchableOpacity>
             </View>
         </View>
 
@@ -187,8 +213,19 @@ class RateRecord extends Component{
         }
     }
 
-    _resetStack() {
+   _resetStack() {
+    if (firebase.auth().currentUser.email === 'admin@gmail.com') {
     this.props
+               .navigation
+               .dispatch(NavigationActions.reset(
+                 {
+                    index: 0,
+                    actions: [
+                      NavigationActions.navigate({ routeName: 'AdminHomeScreen'})
+                    ]
+                  }));
+             } else {
+              this.props
                .navigation
                .dispatch(NavigationActions.reset(
                  {
@@ -197,20 +234,21 @@ class RateRecord extends Component{
                       NavigationActions.navigate({ routeName: 'Buttons'})
                     ]
                   }));
+             }
   }
 
   _saveRecord () { 
-    console.log(record);
-    console.log(records);
-   for(var i=0;i<records.length;i++){
-      if(records[i].title==record.title){
-        console.log("hei " + records[i].title);
-        records[i].votes.push(this.state.newValue);
+    // console.log(record);
+    // console.log(records);
+   // for(var i=0;i<records.length;i++){
+   //    if(records[i].title==record.title){
+   //      console.log("hei " + records[i].title);
+   //      records[i].votes.push(this.state.newValue);
      
-      }
-   }
+   //    }
+   // }
 
-    AsyncStorage.setItem('listOfRecords',JSON.stringify(records)); 
+   //  AsyncStorage.setItem('listOfRecords',JSON.stringify(records)); 
 
   } 
 
@@ -221,7 +259,7 @@ class RateRecord extends Component{
     return(
             <View style={styles.container}>
                 <Text style={styles.title}> Rate Record: </Text>
-                <Picker
+                <Picker style={{width: 200}}
                  selectedValue={this.state.newValue}
                  onValueChange={(newValue) =>{ this.setState({newValue})}}>
                     <Picker.Item label="1" value="1" />
@@ -232,10 +270,11 @@ class RateRecord extends Component{
                 </Picker>
 
                 <View>
-                    <Button onPress={() => {this._saveRecord(); this._resetStack(); }}
-
-                    title="Send Vote"
-                    color="#888888"  />
+                    <TouchableOpacity onPress={() => {this._saveRecord(); this._resetStack(); }} >
+                      <View style={styles.niceButton}>
+                        <Text>Send Vote</Text>
+                      </View>
+                    </TouchableOpacity>
                 </View>
             </View>
         );
@@ -254,14 +293,15 @@ class EmailComponent extends Component{
           <TextInput onChangeText={(email)=>this.setState({email})} style={styles.fullWidth} />
           <Text> Content </Text>
           <TextInput onChangeText={(content)=>this.setState({content}) } style={styles.fullWidth} />
-          <Button
+          <TouchableOpacity
               onPress={() => {
                                                 subject = "Email sent from React Native";
                                                 all = "mailto:" + this.state.email + "?subject=" + subject + "&body=" + this.state.content ;
-                                                Linking.openURL(all)}}
-              title="Send Email"
-              color="#888888"
-          />
+                                                Linking.openURL(all)}} >
+              <View style={styles.niceButton}>
+              <Text>Send Email</Text>
+              </View>
+            </TouchableOpacity>
         </View>
 
 
@@ -270,16 +310,16 @@ class EmailComponent extends Component{
 }
 
 class Add extends Component {
-  _addRecord () { 
-    console.log("hello");
-    records=[...records,this.state];
-    console.log(records);
-    console.log("hhh");
+  // _addRecord () { 
+  //   console.log("hello");
+  //   records=[...records,this.state];
+  //   console.log(records);
+  //   console.log("hhh");
 
-    AsyncStorage.setItem('listOfRecords',JSON.stringify(records)); 
+  //   AsyncStorage.setItem('listOfRecords',JSON.stringify(records)); 
 
-    console.log(records);
-  } 
+  //   console.log(records);
+  // } 
   render(){
           const {navigate} = this.props.navigation;
 
@@ -291,20 +331,24 @@ class Add extends Component {
               <TextInput onChangeText={(content)=>this.setState({band:content}) } style={styles.fullWidth} placeholder="Band" />
               <TextInput onChangeText={(content)=>this.setState({year:content}) } style={styles.fullWidth} placeholder="Year" keyboardType="numeric"/>
               <TextInput onChangeText={(content)=>this.setState({genre:content}) } style={styles.fullWidth} placeholder="Genre" />
-          <Button
+          <TouchableOpacity
               onPress={() => {
-                            this._addRecord(); this.props
-               .navigation
-               .dispatch(NavigationActions.reset(
-                 {
-                    index: 0,
-                    actions: [
-                      NavigationActions.navigate({ routeName: 'Buttons'})
-                    ]
-                  })); }    }      
-              title="Add record"
-              color="#888888"
-          />
+                            //this._addRecord(); 
+                             let id = firebase.database().ref().child('records').push().key;
+                             firebase.database().ref('records').child(id).update({
+                                id: id,
+                                title: this.state.title,
+                                band: this.state.band,
+                                year: this.state.year,
+                                genre: this.state.genre
+                            });
+                            this.props
+               .navigation.goBack(); }    
+             } >
+             <View style={styles.niceButton}>
+              <Text>Add record</Text>
+              </View>
+            </TouchableOpacity>
             </View>
         </View>
       )
@@ -312,6 +356,13 @@ class Add extends Component {
 }
 
 class Login extends Component {
+
+  constructor() {
+    super();
+
+    this.email = "admin@gmail.com";
+    this.password = "123456";
+  }
 
   render() {
     const {navigate} = this.props.navigation;
@@ -328,9 +379,10 @@ class Login extends Component {
               secureTextEntry={true}
               placeholder={"Password"} />
 
-              <Button
-                title="Sign in"
+              <TouchableOpacity
                 onPress={() => {
+                    console.log(this.email);
+                    console.log(this.password);
                     firebase.auth().signInWithEmailAndPassword(this.email, this.password)
                         .then(function () {
                             alert("Welcome " + firebase.auth().currentUser.email + "!");
@@ -344,7 +396,11 @@ class Login extends Component {
                         alert(error.code);
                         alert(error.message);
                     });
-                }} />
+                }} >
+                  <View style={styles.niceButton}>
+                    <Text> Sign in </Text>
+                  </View>
+                </TouchableOpacity>
         </View>
       )
   }
@@ -352,9 +408,21 @@ class Login extends Component {
 
 class AdminHomeScreen extends Component {
   render() {
+    const {navigate} = this.props.navigation;
     return (
-        <View style={styles.container}>
-          <Text> Admin Page </Text>
+       <View style={styles.container}>
+         <TouchableOpacity onPress={() => navigate('Home')} >
+          <View style={styles.niceButton}>
+            <Text>See records</Text>
+          </View>
+         </TouchableOpacity>
+          <TouchableOpacity onPress={() => { console.log("fmm"); navigate('AddScreen') }}>
+            <View style={styles.niceButton}>
+              <Text>Add Record</Text>
+            </View>
+          </TouchableOpacity>
+          
+
         </View>
       )
   }
@@ -382,6 +450,12 @@ const styles = StyleSheet.create({
 
     singleItemDetails:{
         marginTop:20
+    },
+
+    niceButton: {
+      width: 70,
+      height: 40,
+      backgroundColor: "#eeeeee"
     },
 
     item: {
