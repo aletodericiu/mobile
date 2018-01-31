@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form id="myForm" field1="myForm">
+    UUID:<input type = "text" field1 = "uuid" />
+    Name:<input type = "text" field1 = "field1" />
+    Location Type:<input type = "text" field1 = "locationType" />
+    Thumbnail:<input type = "text" field1 = "thumbnail" />
+
+</form>
+<button id = "myButton">Submit Data</button>
+
+
+<script>
+
+    $("#myButton").click(function(){
+        console.log("clicked");
+        //var data_array = $("#myForm").get;
+        //var str = JSON.stringify(data_array);
+        //var formData = JSON.stringify($("#myForm").serializeArray());
+        var complex = $("#myForm").serialize();
+        var json = toSimpleJson(complex);
+        function toSimpleJson(serializedData)
+        {
+            var ar1 = serializedData.split("&");
+            var json = "{";
+            for (var i = 0; i<ar1.length; i++)
+            {
+                var ar2 = ar1[i].split("=");
+                json += i > 0 ? ", " : "";
+                json += "\"" + ar2[0] + "\" : ";
+                json += "\"" + (ar2.length < 2 ? "" : ar2[1]) + "\"";
+            }
+            json += "}";
+            return json;
+        }
+
+        //console.log(formData);
+        //  alert(formData);
+
+
+        $.ajax({
+            type: "POST",
+            url: "http://10.113.0.252:8081/continent/create",
+            data: json,
+            dataType: "json",
+            contentType: "application/json"
+        });
+
+    });
+</script>
+
+</body>
+</html>

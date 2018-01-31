@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Android-Api</string>
+
+    <string name="loading">Loading…</string>
+    <string name="auth_failed">Authentication failed</string>
+    <string name="onlineStatus">You are Online</string>
+    <string name="offlineStatus">You are Offline</string>
+    <string name="contentSynced">Content synced</string>
+    <string name="contentNotSynced">Content not synced</string>
+</resources>
