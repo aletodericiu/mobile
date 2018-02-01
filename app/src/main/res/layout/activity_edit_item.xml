@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ioana.gameapp.AddItemActivity">
+    tools:context="com.example.ioana.gameapp.EditItemActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -58,15 +58,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="Add"
-        android:textSize="20sp"
-        android:onClick="addItem"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Update"
+            android:textSize="20sp"
+            android:onClick="updateItem"/>
 
     </LinearLayout>
-
 
 </android.support.constraint.ConstraintLayout>

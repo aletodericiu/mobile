@@ -20,7 +20,8 @@
         </activity>
         <activity android:name=".ClientActivity" />
         <activity android:name=".EmployeeActivity" />
-        <activity android:name=".AddItem"></activity>
+        <activity android:name=".AddItemActivity" />
+        <activity android:name=".EditItemActivity"></activity>
     </application>
 
 </manifest>

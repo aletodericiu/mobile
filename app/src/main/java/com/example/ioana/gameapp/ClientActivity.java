@@ -3,8 +3,11 @@ package com.example.ioana.gameapp;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -12,6 +15,7 @@ import android.widget.Toast;
 import com.example.ioana.gameapp.adapters.ItemListAdapter;
 import com.example.ioana.gameapp.components.GsonComponent;
 import com.example.ioana.gameapp.domain.Item;
+import com.example.ioana.gameapp.services.NetworkService;
 import com.example.ioana.gameapp.utils.NetworkUtils;
 import com.google.gson.reflect.TypeToken;
 
@@ -22,11 +26,18 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class ClientActivity extends AppCompatActivity {
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
-    private ListView mListView;
+public class ClientActivity extends AppCompatActivity {
+    public static final String TAG = ClientActivity.class.getSimpleName();
+
+    private RecyclerView mListView;
     private ItemListAdapter mAdapter;
     private List<Item> mItems=new ArrayList<>();
+    private NetworkService.NetworkServiceInterface networkService = NetworkService.getInstance();
+    private LinearLayout mLayoutError;
 
     private ProgressBar mProgressBar;
 
@@ -35,61 +46,53 @@ public class ClientActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_client);
 
-        mListView = (ListView) findViewById(R.id.lv_client_items);
+        mListView = (RecyclerView) findViewById(R.id.lv_client_items);
         mProgressBar =(ProgressBar) findViewById(R.id.pb_client);
 
-        mAdapter = new ItemListAdapter(this, mItems, false);
-        mListView.setAdapter(mAdapter);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL, false);
 
+        mListView.setLayoutManager(layoutManager);
+        mLayoutError= (LinearLayout) findViewById(R.id.ll_error);
+        mLayoutError.setVisibility(View.INVISIBLE);
+
+        mListView.setHasFixedSize(true);
+        mAdapter = new ItemListAdapter(this);
+        mListView.setAdapter(mAdapter);
         makeQuery();
     }
 
-    void makeQuery(){
-        URL queryURL=null;
-        try {
-            queryURL = new URL(NetworkUtils.BASE_URL + "/games");
-        }catch(IOException e){
-            e.printStackTrace();
-        }
-        new ClientActivity.QueryTask().execute(queryURL);
-    }
 
-    public class QueryTask extends AsyncTask<URL,Void, String> {
+    void makeQuery() {
+        Call<List<Item>> call = networkService.getGamesClient();
+        call.enqueue(new Callback<List<Item>>() {
+            @Override
+            public void onResponse(
+                    final Call<List<Item>> call,
+                    final Response<List<Item>> response) {
+                mProgressBar.setVisibility(View.INVISIBLE);
+                mLayoutError.setVisibility(View.INVISIBLE);
 
-        @Override
-        protected void onPreExecute(){
-            super.onPreExecute();
-            mProgressBar.setVisibility(View.VISIBLE);
-        }
-
-
-        @Override
-        protected String doInBackground(URL... params) {
-            URL queryUrl=params[0];
-            String jsonResult=null;
-            try {
-                jsonResult=NetworkUtils.getResponseFromHttpUrl(queryUrl);
+                final List<Item> items = response.body();
+                if (items != null && !items.isEmpty()) {
+                    mItems = items;
+                    mAdapter.setData(mItems);
+                    Log.d(TAG, "******************onResponse: Items found as list with size: " + items.size());
+                } else {
+                    Log.d(TAG, "******************onResponse: No items found");
+                }
             }
-            catch (IOException e){
-                e.printStackTrace();
-            }
-            return jsonResult;
-        }
 
-        @Override
-        protected void onPostExecute(String s){
-            mProgressBar.setVisibility(View.INVISIBLE);
-            if(s != null && !s.isEmpty()){
-                Type type = new TypeToken<Collection<Item>>(){
-                }.getType();
+            @Override
+            public void onFailure(
+                    final Call<List<Item>> call,
+                    final Throwable t) {
+                mProgressBar.setVisibility(View.INVISIBLE);
+                mLayoutError.setVisibility(View.VISIBLE);
 
-                mItems = GsonComponent.getInstance().getGson().fromJson(s,type);
-                Log.d("hdhe",s);
-                mAdapter = new ItemListAdapter(ClientActivity.this, mItems, false);
-                mListView.setAdapter(mAdapter);
-            }else{
-                Toast.makeText(ClientActivity.this,"Error!",Toast.LENGTH_SHORT).show();
+                Log.d(TAG, "Error! ");
+                t.printStackTrace();
+                Toast.makeText(ClientActivity.this, "Error! " + t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
             }
-        }
+        });
     }
 }
